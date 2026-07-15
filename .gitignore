@@ -1,0 +1,18 @@
+# Virtual Environment
+.venv/
+
+# Python
+__pycache__/
+*.pyc
+
+# PyCharm
+.idea/
+
+# Allure
+reports/
+
+# Playwright
+playwright-report/
+
+# pytest
+.pytest_cache/
