@@ -24,7 +24,7 @@ jobs:
 
       - name: Установить браузеры Playwright
         run: |
-          playwright install
+          playwright install --with-deps chromium
 
       - name: Проверить доступность сайта
         run: |
