@@ -3,7 +3,6 @@ from pages.base_page import BasePage
 class FormPage (BasePage):
     def navigate(self):
         self.page.goto("https://moskva.beeline.ru/spam-feedback/")
-        self.page.wait_for_selector('[name="person"]')
 
     def fill_name (self, name):
         self.page.locator('[name="person"]').fill(name)

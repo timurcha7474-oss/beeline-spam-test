@@ -26,18 +26,6 @@ jobs:
         run: |
           playwright install --with-deps chromium
 
-      - name: Проверить Playwright
-        run: |
-          python -c "
-      from playwright.sync_api import sync_playwright
-      with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
-        page = browser.new_page()
-        page.goto('https://moskva.beeline.ru/spam-feedback/', timeout=30000)
-        print(page.title())
-        browser.close()
-      "
-
       - name: Запустить тесты
         run: |
           pytest
