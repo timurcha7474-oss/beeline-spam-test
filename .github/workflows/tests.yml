@@ -26,6 +26,10 @@ jobs:
         run: |
           playwright install
 
+      - name: Проверить доступность сайта
+        run: |
+          curl -I https://moskva.beeline.ru/spam-feedback/
+
       - name: Запустить тесты
         run: |
           pytest
