@@ -2,7 +2,7 @@ from pages.base_page import BasePage
 
 class FormPage (BasePage):
     def navigate (self):
-        self.page.goto("https://moskva.beeline.ru/spam-feedback/")
+        self.page.goto("https://moskva.beeline.ru/spam-feedback/", wait_until="domcontentloaded", timeout=60000)
 
     def fill_name (self, name):
         self.page.locator('[name="person"]').fill(name)
