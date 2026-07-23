@@ -16,7 +16,7 @@ def test_success_send_sms(page):
     form.fill_sender("+79377654321")
     form.fill_description("Реклама")
     if not page.locator("comment").is_visible(): pytest.fail("Поле 'Комментарий' не отображается на странице.")
-    form.accept_policy()
+    form.accept_policy ()
 
     form.click_sumbit()
 
